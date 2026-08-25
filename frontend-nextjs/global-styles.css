@@ -1,0 +1,159 @@
+/* Polyglot-Liquidity-Hub — Global Styles
+   Modern CSS3 with custom properties, layout primitives and subtle motion.
+*/
+
+:root {
+  --bg-deep: #0b1120;
+  --bg-panel: #111827;
+  --border: #1f2937;
+  --text-primary: #f1f5f9;
+  --text-muted: #94a3b8;
+  --accent: #38bdf8;
+  --healthy: #34d399;
+  --degraded: #fbbf24;
+  --critical: #f87171;
+  --radius: 10px;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-deep);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Layout ---------- */
+
+.dashboard-root {
+  min-height: 100vh;
+  padding: 2rem 1.5rem 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1.25rem;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin: 0.4rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* ---------- Table ---------- */
+
+.table-wrapper {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+.latency-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.latency-table thead {
+  background: #0f172a;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.75rem;
+}
+
+.latency-table th,
+.latency-table td {
+  padding: 0.85rem 1.1rem;
+  text-align: left;
+}
+
+.latency-table tbody tr {
+  border-top: 1px solid var(--border);
+  transition: background 0.15s ease;
+}
+
+.latency-table tbody tr:hover {
+  background: rgba(56, 189, 248, 0.04);
+}
+
+.lang {
+  color: var(--accent);
+}
+
+.numeric {
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+/* ---------- Status pills ---------- */
+
+.status-pill {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.status-healthy {
+  background: rgba(52, 211, 153, 0.15);
+  color: var(--healthy);
+}
+
+.status-degraded {
+  background: rgba(251, 191, 36, 0.15);
+  color: var(--degraded);
+}
+
+.status-critical {
+  background: rgba(248, 113, 113, 0.15);
+  color: var(--critical);
+  animation: pulse-critical 1.6s ease-in-out infinite;
+}
+
+/* ---------- Motion ---------- */
+
+@keyframes pulse-critical {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+/* ---------- Footer ---------- */
+
+.dashboard-footer {
+  margin-top: 2rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-align: center;
+}
