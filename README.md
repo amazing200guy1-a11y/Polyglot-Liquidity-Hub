@@ -6,12 +6,10 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Next.js-14-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-Modern-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 
 **Enterprise-grade financial stream gateway** that deliberately spans Java 17, Go, Python 3.12, TypeScript/Next.js, HTML5 and CSS3.  
 Each language is chosen for a specific throughput, concurrency or presentation strength so the full stack appears cleanly on GitHub language metrics and demonstrates true polyglot platform engineering.
-
-> Production credentials, live liquidity venues and proprietary matching logic remain private.  
-> This repository is an architectural showcase of multi-language stream design for Principal / Staff platform roles.
 
 ---
 
@@ -66,7 +64,6 @@ cd microservice-python && python stream_bridge.py
 
 # Frontend (Next.js style component)
 # Place dashboard.tsx + global-styles.css inside a Next.js app/ directory
-Attribution
-Architected by a Polyglot Systems / Platform Engineer.
-This repository demonstrates production-ready patterns across Java, Go, Python and modern web stacks.
-Protected under proprietary guidelines. All rights reserved
+## 👨‍💻 Author & Engineering Pedigree
+Architected and authored by Usman Abayomi Bamidele ([@amazing200guy1-a11y](https://github.com/amazing200guy1-a11y)).
+License: MIT Open Source.
